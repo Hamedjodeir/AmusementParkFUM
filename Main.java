@@ -7,7 +7,7 @@ import java.awt.Graphics;
 import Coins.*;
 import Cards.*;
 import SlotMachines.*;
-import Players.*;
+import Players.Player;
 
 public class Main {
 
