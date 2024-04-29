@@ -16,32 +16,33 @@ public class Main {
 
         Player player1 = new Player("Hamed");
         System.out.println(player1.getName());
-        JFrame frame = new JFrame("HAMED");
+        JFrame frame = new JFrame("Sina");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1800, 1000);
     
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
-        NormalCard card = new NormalCard(3, Color.RED, 5, Color.RED, 4, Color.black);
-        NormalCard card2 = new NormalCard(1, Color.RED, 4, Color.RED, 4, Color.BLUE);
-        NormalCard card3 = new NormalCard(2, Color.YELLOW, 9, Color.RED, 4, Color.YELLOW);
-        NormalCard card4 = new NormalCard(4, Color.PINK, 2, Color.RED, 4, Color.WHITE);
+        NormalCardToBuy card = new NormalCardToBuy(8, Color.RED, 5, Color.RED, 4, Color.black);
+        NormalCardToBuy card2 = new NormalCardToBuy(1, Color.RED, 4, Color.RED, 4, Color.BLUE);
+        NormalCardToBuy card3 = new NormalCardToBuy(2, Color.YELLOW, 9, Color.RED, 4, Color.YELLOW);
+        NormalCardToBuy card4 = new NormalCardToBuy(4, Color.PINK, 2, Color.RED, 4, Color.WHITE);
         PrizeClawCard card5 = new PrizeClawCard(5, Color.RED, 3, Color.RED, 4);
         NormalCoin coin = new NormalCoin(Color.RED, 6);
         NormalCoin coin2 = new NormalCoin(Color.YELLOW, 6);
         NormalCoin coin3 = new NormalCoin(Color.PINK, 6);
         NormalCoin coin4 = new NormalCoin(Color.GRAY, 6);
+        
 
         System.out.println(card.priceCoin1.numberOfCoins);
 
         
 
         panel.add(card.cardPanel);
-
+        panel.add(card.getNormalCard().cardPanel);
         panel.add(card2.cardPanel);
 
-        panel.add(card3.cardPanel);
+        panel.add(card.getNormalCardToBuyFromReserve().cardPanel);
 
         panel.add(card4.cardPanel);
 
